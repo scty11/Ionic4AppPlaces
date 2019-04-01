@@ -1,21 +1,16 @@
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AuthPage } from './auth.page';
-import { RegisterPage } from './register/register.page';
+import { RegisterPage } from './register.page';
 
 const routes: Routes = [
   {
-    path: '/register',
-    loadChildren: '/register/register.module#RegisterPageModule'
-  },
-  {
     path: '',
-    component: AuthPage,
+    component: RegisterPage
   }
 ];
 
@@ -26,6 +21,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AuthPage, RegisterPage]
+  declarations: [RegisterPage]
 })
-export class AuthPageModule { }
+export class RegisterPageModule {}
